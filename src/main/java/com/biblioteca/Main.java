@@ -15,16 +15,16 @@ public class Main {
         String nome1 = sc.nextLine();
 
         System.out.println("Digite seu e-mail:");
-        String nome1 = sc.nextLine();
+        String email1 = sc.nextLine();
 
         System.out.println("Digite sua senha:");
-        String nome1 = sc.nextLine();
+        String senha1 = sc.nextLine();
 
         System.out.println("Digite o tipo de usuário: (Estudante, Bibliotecario, Administrador)");
-        String nome1 = sc.nextLine();
+        String tipo1 = sc.nextLine();
 
         System.out.println("Digite a data de Cadastro:");
-        String nome1 = sc.nextLine();
+        String data1 = sc.nextLine();
 
         var user = new Usuario("Vinicius","vrc_crv@outlook.com.br","@Kinha67");
 
