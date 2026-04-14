@@ -1,5 +1,5 @@
 const form = document.getElementById("formLogin");
-""
+
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -8,7 +8,13 @@ form.addEventListener("submit", function(event) {
 
     if (email === "" || senha === "") {
         alert("Preencha todos os campos!");
+    } else if (email === "cliente@gmail.com") {
+        window.location.href = "perfil-cliente.html";
+    } else if (email === "bibliotecario@gmail.com") {
+        window.location.href = "perfil-bibliotecario.html";
+    } else if (email === "adm@gmail.com") {
+        window.location.href = "perfil-adm.html";
     } else {
-        alert("Login realizado com sucesso!");
+        alert("Usuário não identificado!");
     }
 });
