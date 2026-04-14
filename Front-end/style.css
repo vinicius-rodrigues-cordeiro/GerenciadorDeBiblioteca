@@ -1,154 +1,35 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* FUNDO */
 body {
-    background-color: #dcdcdc;
+    font-family: Arial;
+    background-color: #f2f2f2;
 }
 
-/* TOPO */
-.top-bar {
-    background-color: #35b0b5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-}
-
-/* LOGO */
-.logo {
-    background: #eee;
-    padding: 20px;
-    font-weight: bold;
-    width: 120px;
+h1 {
     text-align: center;
-}
-
-/* BUSCA */
-.search {
-    display: flex;
-    align-items: center;
-}
-
-.search input {
-    padding: 10px;
-    width: 300px;
-    border: none;
-    outline: none;
-}
-
-.search button {
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    background: #eee;
-}
-
-/* USER (SEM BOLINHA) */
-.user {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-/* MENU */
-nav {
-    display: flex;
-    justify-content: center;
-    background: #cfcfcf;
-}
-
-nav a {
-    padding: 12px 25px;
-    text-decoration: none;
-    color: black;
-    border-right: 1px solid #999;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background: #b5b5b5;
-}
-
-/* CONTEÚDO */
-main {
-    padding: 40px;
+    color: #0b6e79;
 }
 
 h2 {
-    margin-bottom: 20px;
-    font-weight: normal;
-}
-
-/* LIVROS */
-.books {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-}
-
-.book {
     text-align: center;
-    width: 130px;
 }
 
-.book img {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: 0.3s;
+form {
+    background: white;
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
 }
 
-.book:hover img {
-    transform: scale(1.05);
+input {
+    width: 95%;
+    padding: 8px;
 }
 
-.book p {
-    margin-top: 10px;
-    font-size: 14px;
-    min-height: 40px;
-}
-
-/* CATEGORIAS */
-.categorias {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-bottom: 60px;
-}
-
-.categoria {
-    background: #cfcfcf;
-    padding: 15px;
-    text-align: center;
-    width: 200px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.categoria:hover {
-    background: #b5b5b5;
-}
-
-.categoria-imgs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.categoria-imgs img {
-    width: 70px;
-    height: 100px;
-    object-fit: cover;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0b6e79;
+    color: white;
+    border: none;
 }
