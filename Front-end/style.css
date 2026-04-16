@@ -1,154 +1,133 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* FUNDO */
 body {
-    background-color: #dcdcdc;
+    font-family: Arial;
+    background-color: #f2f2f2;
 }
 
-/* TOPO */
-.top-bar {
-    background-color: #35b0b5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-}
-
-/* LOGO */
-.logo {
-    background: #eee;
-    padding: 20px;
-    font-weight: bold;
-    width: 120px;
+h1 {
     text-align: center;
-}
-
-/* BUSCA */
-.search {
-    display: flex;
-    align-items: center;
-}
-
-.search input {
-    padding: 10px;
-    width: 300px;
-    border: none;
-    outline: none;
-}
-
-.search button {
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    background: #eee;
-}
-
-/* USER (SEM BOLINHA) */
-.user {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-/* MENU */
-nav {
-    display: flex;
-    justify-content: center;
-    background: #cfcfcf;
-}
-
-nav a {
-    padding: 12px 25px;
-    text-decoration: none;
-    color: black;
-    border-right: 1px solid #999;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background: #b5b5b5;
-}
-
-/* CONTEÚDO */
-main {
-    padding: 40px;
+    color: #0b6e79;
 }
 
 h2 {
+    text-align: center;
+}
+
+form {
+    background: white;
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+input {
+    width: 95%;
+    padding: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0b6e79;
+    color: white;
+    border: none;
+}
+
+.menu {
+    text-align: center;
     margin-bottom: 20px;
-    font-weight: normal;
 }
 
-/* LIVROS */
-.books {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
+.menu a {
+    text-decoration: none;
+    color: #0b6e79;
+    font-weight: bold;
+    margin: 0 10px;
 }
 
-.book {
+.caixa-perfil {
+    background: white;
+    width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+.caixa-perfil h2 {
     text-align: center;
-    width: 130px;
+    margin-bottom: 20px;
 }
 
-.book img {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.book:hover img {
-    transform: scale(1.05);
-}
-
-.book p {
-    margin-top: 10px;
-    font-size: 14px;
-    min-height: 40px;
-}
-
-/* CATEGORIAS */
-.categorias {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-bottom: 60px;
-}
-
-.categoria {
-    background: #cfcfcf;
-    padding: 15px;
-    text-align: center;
-    width: 200px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.categoria:hover {
-    background: #b5b5b5;
-}
-
-.categoria-imgs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.caixa-perfil h3 {
+    color: #0b6e79;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.categoria-imgs img {
-    width: 70px;
-    height: 100px;
-    object-fit: cover;
+.caixa-perfil p {
+    margin-bottom: 10px;
+}
+
+.caixa-perfil ul {
+    margin-left: 20px;
+}
+
+.menu-bibliotecario {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu-bibliotecario button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0b6e79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-bibliotecario button:hover {
+    background-color: #09545c;
+}
+
+#conteudo-bibliotecario {
+    width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: center;
+}
+
+.menu-adm {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu-adm button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0b6e79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-adm button:hover {
+    background-color: #09545c;
+}
+
+#conteudo-adm {
+    width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: center;
 }
