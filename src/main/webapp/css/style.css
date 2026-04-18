@@ -1,0 +1,133 @@
+body {
+    font-family: Arial;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    color: #0b6e79;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    background: white;
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+input {
+    width: 95%;
+    padding: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0b6e79;
+    color: white;
+    border: none;
+}
+
+.menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0b6e79;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.caixa-perfil {
+    background: white;
+    width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+.caixa-perfil h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.caixa-perfil h3 {
+    color: #0b6e79;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.caixa-perfil p {
+    margin-bottom: 10px;
+}
+
+.caixa-perfil ul {
+    margin-left: 20px;
+}
+
+.menu-bibliotecario {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu-bibliotecario button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0b6e79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-bibliotecario button:hover {
+    background-color: #09545c;
+}
+
+#conteudo-bibliotecario {
+    width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: center;
+}
+
+.menu-adm {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu-adm button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0b6e79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-adm button:hover {
+    background-color: #09545c;
+}
+
+#conteudo-adm {
+    width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: center;
+}

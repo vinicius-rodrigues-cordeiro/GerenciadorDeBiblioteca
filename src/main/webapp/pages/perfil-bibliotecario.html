@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Bibliotecário</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <h1>📚 Biblioteca - Bibliotecário</h1>
+
+    <h2>Bem-vindo, Bibliotecário!</h2>
+
+    <section class="menu-bibliotecario">
+        <button onclick="cadastrarLivro()">Cadastrar Livro</button>
+        <button onclick="registrarEmprestimo()">Registrar Empréstimo</button>
+        <button onclick="registrarDevolucao()">Registrar Devolução</button>
+        <button onclick="consultarLivros()">Consultar Livros</button>
+        <button onclick="sair()">Sair</button>
+    </section>
+
+    <section id="conteudo-bibliotecario"></section>
+
+    <script>
+        function cadastrarLivro() {
+            document.getElementById("conteudo-bibliotecario").innerHTML = `
+                <h3>Cadastrar Livro</h3>
+                <p>Título: Dom Casmurro</p>
+                <p>Autor: Machado de Assis</p>
+                <p>Status: Disponível</p>
+            `;
+        }
+
+        function registrarEmprestimo() {
+            document.getElementById("conteudo-bibliotecario").innerHTML = `
+                <h3>Registrar Empréstimo</h3>
+                <p>Empréstimo registrado para o cliente.</p>
+            `;
+        }
+
+        function registrarDevolucao() {
+            document.getElementById("conteudo-bibliotecario").innerHTML = `
+                <h3>Registrar Devolução</h3>
+                <p>Devolução registrada com sucesso.</p>
+            `;
+        }
+
+        function consultarLivros() {
+            document.getElementById("conteudo-bibliotecario").innerHTML = `
+                <h3>Consultar Livros</h3>
+                <p>Livro 1 - Disponível</p>
+                <p>Livro 2 - Emprestado</p>
+                <p>Livro 3 - Reservado</p>
+            `;
+        }
+
+        function sair() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

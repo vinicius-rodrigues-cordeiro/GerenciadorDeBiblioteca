@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Administrador</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <h1>📚 Biblioteca - Administrador</h1>
+
+    <h2>Bem-vindo, Administrador!</h2>
+
+    <section class="menu-adm">
+        <button onclick="gerenciarUsuarios()">Gerenciar Usuários</button>
+        <button onclick="gerenciarLivros()">Gerenciar Livros</button>
+        <button onclick="verRelatorios()">Ver Relatórios</button>
+        <button onclick="controlarMultas()">Controlar Multas</button>
+        <button onclick="sair()">Sair</button>
+    </section>
+
+    <section id="conteudo-adm"></section>
+
+    <script>
+        function gerenciarUsuarios() {
+            document.getElementById("conteudo-adm").innerHTML = `
+                <h3>Gerenciar Usuários</h3>
+                <p>Cliente 1 - Ativo</p>
+                <p>Cliente 2 - Ativo</p>
+                <p>Bibliotecário - Ativo</p>
+            `;
+        }
+
+        function gerenciarLivros() {
+            document.getElementById("conteudo-adm").innerHTML = `
+                <h3>Gerenciar Livros</h3>
+                <p>Total de livros cadastrados: 120</p>
+                <p>Livros disponíveis: 95</p>
+                <p>Livros emprestados: 25</p>
+            `;
+        }
+
+        function verRelatorios() {
+            document.getElementById("conteudo-adm").innerHTML = `
+                <h3>Relatórios</h3>
+                <p>Relatório de empréstimos do mês</p>
+                <p>Relatório de devoluções</p>
+                <p>Relatório de usuários cadastrados</p>
+            `;
+        }
+
+        function controlarMultas() {
+            document.getElementById("conteudo-adm").innerHTML = `
+                <h3>Controlar Multas</h3>
+                <p>Cliente 1 - Multa pendente</p>
+                <p>Cliente 2 - Sem multa</p>
+            `;
+        }
+
+        function sair() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>
