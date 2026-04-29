@@ -4,7 +4,6 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
@@ -16,17 +15,10 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
 
         if (session != null) {
-            session.invalidate(); // 🔥 encerra sessão
+            session.invalidate();
         }
 
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-
-        PrintWriter out = response.getWriter();
-
-        response.setStatus(HttpServletResponse.SC_OK);
-        out.print("{\"status\":\"success\",\"message\":\"Logout realizado\"}");
-
-        out.flush();
+        // Redireciona para o login após logout
+        response.sendRedirect(request.getContextPath() + "/login");
     }
 }

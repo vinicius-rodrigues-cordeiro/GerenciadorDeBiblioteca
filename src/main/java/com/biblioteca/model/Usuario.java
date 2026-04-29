@@ -1,61 +1,84 @@
 package com.biblioteca.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Usuario {
 
-    private int idUsuario;
+    public enum Tipo { ADMIN, COMUM, ESTUDANTE, BIBLIOTECARIO }
+
+    private int id;
     private String nome;
     private String email;
-    private String senha;
-    private String tipo;
-    private String status;
-    private LocalDate dataCadastro;
+    private String senhaHash;
+    private Tipo tipo;
+    private String telefone;
+    private boolean bloqueado = false;
+    private int tentativasLogin = 0;
+    private LocalDateTime ultimaTentativa;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
-    // 🔹 Construtor vazio (ESSENCIAL)
-    public Usuario() {
-    }
+    // Construtor vazio — usado pelo DAO
+    public Usuario() {}
 
-    public Usuario(String nome, String email, String senha) {
+    // Construtor mínimo — cadastro
+    public Usuario(String nome, String email, String senhaHash, Tipo tipo) {
         this.nome = nome;
         this.email = email;
-        this.senha = senha;
-        this.dataCadastro = LocalDate.now();
-        this.status = "ATIVO";
-    }
-
-    public Usuario(String nome, String email, String senha, String tipo) {
-        this(nome, email, senha);
+        this.senhaHash = senhaHash;
         this.tipo = tipo;
     }
 
-    public Usuario(String nome, String email, String senha, String tipo, LocalDate dataCadastro) {
-        this(nome, email, senha, tipo);
-        this.dataCadastro = dataCadastro;
+    // Construtor completo — usado pelo DAO ao reconstruir do banco
+    public Usuario(int id, String nome, String email, String senhaHash,
+                   Tipo tipo, String telefone, boolean bloqueado,
+                   int tentativasLogin, LocalDateTime ultimaTentativa,
+                   LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this(nome, email, senhaHash, tipo);
+        this.id = id;
+        this.telefone = telefone;
+        this.bloqueado = bloqueado;
+        this.tentativasLogin = tentativasLogin;
+        this.ultimaTentativa = ultimaTentativa;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
-    public Usuario(int idUsuario, String nome, String email, String senha, String tipo, LocalDate dataCadastro) {
-        this(nome, email, senha, tipo, dataCadastro);
-        this.idUsuario = idUsuario;
-    }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public int getIdUsuario() { return idUsuario; }
     public String getNome() { return nome; }
-    public String getEmail() { return email; }
-    public String getSenha() { return senha; }
-    public String getTipo() { return tipo; }
-    public String getStatus() { return status; }
-    public LocalDate getDataCadastro() { return dataCadastro; }
-
-    public void setIdUsuario(int idUsuario) { this.idUsuario = idUsuario; }
     public void setNome(String nome) { this.nome = nome; }
-    public void setEmail(String email) { this.email = email; }
-    public void setSenha(String senha) { this.senha = senha; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
-    public void setStatus(String status) { this.status = status; }
-    public void setDataCadastro(LocalDate dataCadastro) { this.dataCadastro = dataCadastro; }
 
-    public boolean isAtivo() {
-        return status != null && status.equalsIgnoreCase("ATIVO");
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    public String getSenhaHash() { return senhaHash; }
+    public void setSenhaHash(String senhaHash) { this.senhaHash = senhaHash; }
+
+    public Tipo getTipo() { return tipo; }
+    public void setTipo(Tipo tipo) { this.tipo = tipo; }
+
+    public String getTelefone() { return telefone; }
+    public void setTelefone(String telefone) { this.telefone = telefone; }
+
+    public boolean isBloqueado() { return bloqueado; }
+    public void setBloqueado(boolean bloqueado) { this.bloqueado = bloqueado; }
+
+    public int getTentativasLogin() { return tentativasLogin; }
+    public void setTentativasLogin(int tentativasLogin) { this.tentativasLogin = tentativasLogin; }
+
+    public LocalDateTime getUltimaTentativa() { return ultimaTentativa; }
+    public void setUltimaTentativa(LocalDateTime ultimaTentativa) { this.ultimaTentativa = ultimaTentativa; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+
+    @Override
+    public String toString() {
+        return "Usuario{id=" + id + ", nome=" + nome + ", tipo=" + tipo + "}";
     }
 }
